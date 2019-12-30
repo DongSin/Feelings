@@ -38,7 +38,7 @@ class AddActivity : AppCompatActivity() {
     private fun saveFeeling(){
         val intent = Intent()
         intent.putExtra(EXTRA_MOOD,mood)
-        intent.putExtra(EXTRA_REMARK,editTextRemark.text)
+        intent.putExtra(EXTRA_REMARK,editTextRemark.text.toString())
         setResult(Activity.RESULT_OK,intent)
         finish()
     }

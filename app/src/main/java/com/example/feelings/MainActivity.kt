@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         if(requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK){
             val _mood = data?.getIntExtra(AddActivity.EXTRA_MOOD,0)
             val _remark = data?.getStringExtra(AddActivity.EXTRA_REMARK)
-            val feeling:MyFeeling = MyFeeling(0,mood = _mood!!,remarks = _remark!!,created_at = System.currentTimeMillis())
+            val feeling:MyFeeling = MyFeeling(0,mood = _mood!!,created_at = System.currentTimeMillis(),remarks = _remark!!)
 
             feelingViewModel.insert(feeling)
         }
