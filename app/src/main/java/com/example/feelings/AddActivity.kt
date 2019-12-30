@@ -16,7 +16,7 @@ class AddActivity : AppCompatActivity() {
         setContentView(R.layout.activity_add)
 
         buttonSave.setOnClickListener {
-            saveUser()
+            saveFeeling()
         }
 
         imageViewHappy.setOnClickListener {
@@ -35,7 +35,7 @@ class AddActivity : AppCompatActivity() {
         }
     }
 
-    private fun saveUser(){
+    private fun saveFeeling(){
         val intent = Intent()
         intent.putExtra(EXTRA_MOOD,mood)
         intent.putExtra(EXTRA_REMARK,editTextRemark.text)

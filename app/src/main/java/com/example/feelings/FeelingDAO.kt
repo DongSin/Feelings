@@ -11,5 +11,5 @@ interface FeelingDAO{
     suspend fun insertFeeling(feeling: MyFeeling)
 
     @Query("select * from feeling")
-    fun getFeelings() : LiveData<MyFeeling>
+    fun getFeelings() : LiveData<List<MyFeeling>>
 }
